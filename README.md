@@ -41,31 +41,6 @@ GEMINI_API_KEY=your_gemini_api_key
 SESSION_TTL=86400
 \`\`\`
 
-### Installation
-
-1. Clone the repository:
-   \`\`\`bash
-   git clone https://github.com/yourusername/news-rag-chatbot.git
-   cd news-rag-chatbot
-   \`\`\`
-
-2. Install dependencies:
-   \`\`\`bash
-   npm install
-   \`\`\`
-
-3. Run the news ingestion script:
-   \`\`\`bash
-   npm run ingest-news
-   \`\`\`
-
-4. Start the development server:
-   \`\`\`bash
-   npm run dev
-   \`\`\`
-
-5. Open [http://localhost:3000](http://localhost:3000) in your browser.
-
 ## Caching Strategy
 
 This application uses Redis for caching with the following considerations:

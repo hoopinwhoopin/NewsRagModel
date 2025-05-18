@@ -97,15 +97,6 @@ docker build -t news-rag-chatbot .
 docker run -p 3000:3000 --env-file .env news-rag-chatbot
 \`\`\`
 
-### Vercel
-
-This project can be deployed to Vercel:
-
-1. Push to GitHub
-2. Import to Vercel
-3. Configure environment variables
-4. Deploy
-
 ## Project Structure
 
 - `/app`: Next.js app router pages and API routes

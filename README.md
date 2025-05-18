@@ -19,8 +19,6 @@ A full-stack chatbot application that answers questions about recent news using 
 - **LLM**: Google Gemini Pro
 - **Caching**: Redis
 
-## Getting Started
-
 ### Prerequisites
 
 - Node.js 18+
@@ -29,48 +27,7 @@ A full-stack chatbot application that answers questions about recent news using 
 - OpenAI API key (for embeddings)
 - Google Gemini API key
 
-### Environment Variables
 
-Create a `.env` file with the following variables:
-
-\`\`\`
-REDIS_URL=redis://localhost:6379
-QDRANT_URL=http://localhost:6333
-OPENAI_API_KEY=your_openai_api_key
-GEMINI_API_KEY=your_gemini_api_key
-SESSION_TTL=86400
-\`\`\`
-
-## Caching Strategy
-
-This application uses Redis for caching with the following considerations:
-
-### TTL Configuration
-
-- Session data expires after 24 hours by default (configurable via `SESSION_TTL` env var)
-- This prevents memory leaks and ensures old sessions are cleaned up
-
-### Cache Warming
-
-- The news ingestion script can be scheduled to run periodically
-- This ensures the vector database always has fresh news articles
-- You can trigger ingestion manually from the dashboard
-
-### Performance Optimizations
-
-- Chat history is limited to recent messages to prevent large payloads
-- Vector search is optimized with proper indexing in Qdrant
-
-## Deployment
-
-### Docker
-
-A Dockerfile is provided for containerized deployment:
-
-\`\`\`bash
-docker build -t news-rag-chatbot .
-docker run -p 3000:3000 --env-file .env news-rag-chatbot
-\`\`\`
 
 ## Project Structure
 

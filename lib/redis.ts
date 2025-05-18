@@ -13,7 +13,7 @@ const initRedisClient = () => {
     // Use direct connection parameters instead of Redis URL
     const client = createClient({
       socket: {
-        host: "redis-16500.c326.us-east-1-3.ec2.redns.redis-cloud.com",
+        host: "redis://default:nAMAsl67FNPgLk22OTVJ0bM0aIjE9E36@redis-16500.c326.us-east-1-3.ec2.redns.redis-cloud.com:16500",
         port: 16500,
       },
       username: "default",
